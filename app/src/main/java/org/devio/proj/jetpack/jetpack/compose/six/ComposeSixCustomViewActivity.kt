@@ -32,8 +32,7 @@ class ComposeSixCustomViewActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-
-
+                    Text("Hi there!", Modifier.firstBaselineToTopDP(32.dp))
                 }
             }
         }
@@ -49,8 +48,8 @@ class ComposeSixCustomViewActivity : ComponentActivity() {
 @Composable
 fun TextWithPaddingToBaselinePreview() {
     SampleJetpackComposeTheme {
-//        Text("Hi there!", Modifier.firstBaselineToTopDP(32.dp))
-        BodyContent()
+        Text("Hi there!", Modifier.firstBaselineToTopDP(32.dp))
+//        BodyContent()
     }
 }
 
@@ -83,10 +82,14 @@ fun Modifier.firstBaselineToTopDP(
         // Height of the composable with padding - first baseline
         //4. 设置基准线到顶部的高度 - 基准线 就是计算文本的高度
         val placeableY = firstBaselineToTop.roundToPx() - firstBaseline
-        Log.e(TAG, "firstBaselineToTop: $firstBaseline  - placeableY: $placeableY")
+        Log.e(
+            TAG,
+            "firstBaselineToTop: $firstBaseline  - placeableY: $placeableY  " +
+                    "firstBaselineToTop.roundToPx()：${firstBaselineToTop.roundToPx()}"
+        )
         //5. 文本的高度 + 预设高度
         val height = placeable.height + placeableY
-        Log.e(TAG, "height: $height  ")
+        Log.e(TAG, "height: $height placeable.height:${placeable.height} ")
         layout(placeable.width, height) {
             // Where the composable gets placed
             //6. 确定放置位置 如果您不调用 placeRelative，该可组合项将不可见
