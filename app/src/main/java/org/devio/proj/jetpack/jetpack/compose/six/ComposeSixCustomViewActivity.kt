@@ -5,14 +5,18 @@ import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.Card
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.AlignmentLine
 import androidx.compose.ui.layout.FirstBaseline
 import androidx.compose.ui.layout.layout
@@ -39,33 +43,12 @@ class ComposeSixCustomViewActivity : ComponentActivity() {
     }
 }
 
-@Preview(
-    showBackground = true,
-    uiMode = Configuration.UI_MODE_NIGHT_YES,
-    name = "DefaultPreviewDark"
-)
-@Preview
-@Composable
-fun TextWithPaddingToBaselinePreview() {
-    SampleJetpackComposeTheme {
-        Text("Hi there!", Modifier.firstBaselineToTopDP(32.dp))
-//        BodyContent()
-    }
-}
 
-@Preview(
-    showBackground = true,
-    uiMode = Configuration.UI_MODE_NIGHT_YES,
-    name = "DefaultPreviewDark"
-)
-@Composable
-fun TextWithNormalPaddingPreview() {
-    SampleJetpackComposeTheme {
-        Text("Hi there!", Modifier.padding(top = 32.dp))
-    }
-}
+
+
 
 private const val TAG = "ComposeSixCustomViewActivity"
+// hint 这里要明白一个非常重要的概念 padding 的设置是 top顶部到firstBaseLine 的距离
 fun Modifier.firstBaselineToTopDP(
     firstBaselineToTop: Dp
 ) = this.then(
@@ -97,3 +80,46 @@ fun Modifier.firstBaselineToTopDP(
         }
     }
 )
+
+
+
+@Preview(
+    showBackground = true,
+    uiMode = Configuration.UI_MODE_NIGHT_YES,
+    name = "DefaultPreviewDark"
+)
+@Preview
+@Composable
+fun TextWithPaddingToBaselinePreview() {
+    SampleJetpackComposeTheme {
+        Text("Hi there!!", Modifier.firstBaselineToTopDP(32.dp))
+//        BodyContent()
+    }
+}
+
+@Preview(
+    showBackground = true,
+    uiMode = Configuration.UI_MODE_NIGHT_YES,
+    name = "DefaultPreviewDark"
+)
+@Composable
+fun TextWithNormalPaddingPreview() {
+    SampleJetpackComposeTheme {
+        Text("Hi there!", Modifier.padding(top = 32.dp))
+    }
+}
+
+@Preview(
+    showBackground = true,
+    uiMode = Configuration.UI_MODE_NIGHT_YES,
+    name = "DefaultPreviewDark"
+)
+@Composable
+fun ColumnOwnColumn() {
+    SampleJetpackComposeTheme{
+        BodyContent()
+    }
+}
+
+
+

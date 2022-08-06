@@ -72,5 +72,7 @@ dependencies {
 
     // Compose图片加载框架 ->hint 可以使用 Accompanist 封装容器选用 Glide代替
     implementation 'io.coil-kt:coil-compose:1.4.0'
+    // Compose 中的constraintlayout约束布局
+    implementation "androidx.constraintlayout:constraintlayout-compose:1.0.0-rc01"
 
 }

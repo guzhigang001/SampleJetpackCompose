@@ -13,4 +13,8 @@
     <string name="show_more">Show more</string>
     <string name="title_activity_basic_compose_six">BasicComposeSixActivity</string>
     <string name="title_activity_compose_six_custom_view">ComposeSixCustomViewActivity</string>
+    <string name="title_activity_compose_eight_custom_view">ComposeEightCustomViewActivity</string>
+    <string name="title_activity_compose_six_layou_modifier">ComposeSixLayouModifierActivity
+    </string>
+    <string name="title_activity_compose_ten_activity.kt">ComposeTenActivity.kt</string>
 </resources>

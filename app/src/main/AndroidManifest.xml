@@ -14,9 +14,9 @@
         android:theme="@style/Theme.SampleJetpackCompose"
         tools:targetApi="31">
         <activity
-            android:name=".six.ComposeSixCustomViewActivity"
+            android:name=".six.ten.ComposeTenActivity"
             android:exported="true"
-            android:label="@string/title_activity_compose_six_custom_view"
+            android:label="@string/title_activity_compose_ten_activity.kt"
             android:theme="@style/Theme.SampleJetpackCompose" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,16 +25,33 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".six.nine.ComposeSixLayoutModifierActivity"
+            android:exported="true"
+            android:label="@string/title_activity_compose_six_layou_modifier"
+            android:theme="@style/Theme.SampleJetpackCompose">
+
+        </activity>
+        <activity
+            android:name=".six.eight.ComposeEightCustomViewActivity"
+            android:exported="true"
+            android:label="@string/title_activity_compose_eight_custom_view"
+            android:theme="@style/Theme.SampleJetpackCompose"></activity>
+        <activity
+            android:name=".six.ComposeSixCustomViewActivity"
+            android:exported="true"
+            android:label="@string/title_activity_compose_six_custom_view"
+            android:theme="@style/Theme.SampleJetpackCompose" />
+        <activity
             android:name=".BasicComposeSixActivity"
             android:exported="true"
             android:label="@string/title_activity_basic_compose_six"
-            android:theme="@style/Theme.SampleJetpackCompose"></activity>
+            android:theme="@style/Theme.SampleJetpackCompose" />
         <activity
             android:name=".CardActivity"
             android:exported="true" />
         <activity
             android:name=".BasicComposeFourActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".SampleMainActivity"
             android:exported="true">
@@ -50,9 +67,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.SampleJetpackCompose">
-
-        </activity>
+            android:theme="@style/Theme.SampleJetpackCompose" />
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />
